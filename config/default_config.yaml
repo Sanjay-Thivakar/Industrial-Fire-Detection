@@ -1,0 +1,116 @@
+project:
+  name: "AI-Based Detection and Classification of Industrial Fires"
+  version: "1.0.0"
+
+paths:
+  raw_dir: "data/raw"
+  cache_dir: "data/cache"
+  output_dir: "outputs"
+  firms_zip: null  # Auto-detected in raw_dir if null
+
+region:
+  name: "Tamil Nadu"
+  admin_level: 1
+  boundary_cache: "tamil_nadu_boundary.geojson"
+  epsg_metric: "EPSG:32643"  # UTM Zone 43N for Tamil Nadu planar spatial calculations
+  fallback_natural_earth_url: "https://naturalearth.s3.amazonaws.com/10m_cultural/ne_10m_admin_1_states_provinces.zip"
+
+firms:
+  chunk_size: 100000  # Number of rows per pandas chunk during streaming ingestion
+  primary_sensors:
+    - name: "VIIRS_N20"
+      pattern: "J1V-C2"
+    - name: "VIIRS_SUOMI_NPP"
+      pattern: "SV-C2"
+    - name: "VIIRS_NOAA21"
+      pattern: "J2V-C2"
+  extensible_sensors:
+    - name: "MODIS"
+      pattern: "M-C61"
+      include_in_baseline: false  # Can be set to true for historical/validation runs
+
+osm:
+  cache_json: "osm_industrial_facilities.json"
+  output_csv: "OSM_Industrial_Facilities.csv"
+  overpass_mirrors:
+    - "https://overpass-api.de/api/interpreter"
+    - "https://overpass.kumi.systems/api/interpreter"
+    - "https://overpass.openstreetmap.ru/api/interpreter"
+    - "https://overpass.private.coffee/api/interpreter"
+  timeout_seconds: 60
+  max_retries: 2
+
+spatial:
+  distance_radii_m: [500, 1000, 2000, 5000]
+  grid_size_deg: 0.01
+  min_grid_obs: 5  # Minimum historical observations in grid cell required to use local baseline
+
+landcover:
+  enabled: true
+  cache_file: "landcover_tn_sampled.csv"
+  s3_url_template: "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_{tile}_Map.tif"
+  class_map:
+    10: "Tree cover"
+    20: "Shrubland"
+    30: "Grassland"
+    40: "Cropland"
+    50: "Built-up"
+    60: "Bare/sparse vegetation"
+    70: "Snow and ice"
+    80: "Permanent water bodies"
+    90: "Herbaceous wetland"
+    95: "Mangroves"
+    100: "Moss and lichen"
+
+weak_labeling:
+  facility_distance_threshold_m: 2000
+  persistent_active_days_threshold: 3
+  persistence_window_days: 365  # Rolling/annual window in days for grid_active_days calculation
+  forest_fire_months: [2, 3, 4, 5]
+  stubble_burning_months: [4, 5, 10, 11]
+
+model:
+  random_state: 42
+  test_size: 0.25
+  n_estimators: 300
+  max_depth: 12
+  min_samples_leaf: 3
+  class_weight: "balanced"
+  n_jobs: -1
+
+outputs:
+  csv_file: "TamilNadu_Classified_Fires.csv"
+  geojson_file: "TamilNadu_Classified_Fires.geojson"
+  html_map_file: "TamilNadu_FireMap.html"
+
+sentinel2:
+  # CDSE OData Catalogue (Discovery)
+  api_base_url: "https://catalogue.dataspace.copernicus.eu/odata/v1"
+  pre_event_days: 15
+  post_event_days: 15
+  max_cloud_cover_percent: 40.0
+  target_product_type: "S2MSI2A"
+  collection_name: "SENTINEL-2"
+  timeout_seconds: 30
+  max_retries: 3
+  prototype_sample_size: 10
+
+  # CDSE Sentinel Hub Processing API (Localized AOI Retrieval)
+  process_api_url: "https://sh.dataspace.copernicus.eu/api/v1/process"
+  oauth_token_url: "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/protocol/openid-connect/token"
+  client_id: null      # Optional; read from CDSE_CLIENT_ID env var if null
+  client_secret: null  # Optional; read from CDSE_CLIENT_SECRET env var if null
+
+  # Localized AOI Geometry & Quality
+  patch_size_m: 1000            # Side length of the localized AOI in meters (1 km x 1 km)
+  target_resolution_m: 20       # Target spatial resolution (20m for SCL, B11, B12)
+  min_valid_surface_pct: 70.0   # Minimum valid surface percentage (classes 4, 5, 6)
+  max_cloud_pct: 20.0           # Maximum allowable cloud percentage (classes 8, 9, 10)
+  target_bands:
+    - "SCL"  # Scene Classification Layer (20m)
+    - "B04"  # Red (10m)
+    - "B08"  # NIR (10m)
+    - "B11"  # SWIR-1 (20m)
+    - "B12"  # SWIR-2 (20m)
+
+

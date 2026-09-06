@@ -1,0 +1,8 @@
+known_facility,search_lat,search_lon,status,nearest_osm_name,nearest_category,nearest_tier,nearest_distance_m
+Mettur Thermal Power Station,11.8,77.8,STRONG MATCH (< 1 km),Mettur Town,Substation & Electrical Infrastructure,CAUTION_LOWER_RELEVANCE,398.0
+Salem Steel Plant,11.65,78.14,STRONG MATCH (< 1 km),nan,Industrial Area / Zone,GENERAL_CONTEXT,802.0
+Neyveli Lignite Corporation,11.596,79.488,STRONG MATCH (< 1 km),nan,Substation & Electrical Infrastructure,CAUTION_LOWER_RELEVANCE,997.0
+Ariyalur Cement Cluster,11.13,79.08,NEARBY MATCH (< 5 km),Ariyalur,Substation & Electrical Infrastructure,CAUTION_LOWER_RELEVANCE,1339.0
+Manali/Chennai Industrial Corridor,13.165,80.26,NO MATCH within 10 km (nearest: 116212 m),nan,Industrial Area / Zone,GENERAL_CONTEXT,116212.0
+Tuticorin Industrial/Port Region,8.764,78.13,NO MATCH within 10 km (nearest: 43906 m),nan,Power Plant,HIGHER_RELEVANCE,43906.0
+Ennore Industrial/Power Region,13.208,80.323,NO MATCH within 10 km (nearest: 122888 m),nan,Industrial Area / Zone,GENERAL_CONTEXT,122888.0

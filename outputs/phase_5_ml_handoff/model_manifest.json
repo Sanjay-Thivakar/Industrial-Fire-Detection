@@ -1,0 +1,67 @@
+{
+  "model_path": "final_model.joblib",
+  "model_type": "RandomForestClassifier",
+  "pipeline_steps": [
+    "ColumnTransformer(remainder='drop', categorical=OneHotEncoder, numeric=SimpleImputer)",
+    "RandomForestClassifier(n_estimators=100, max_depth=6, min_samples_split=4, class_weight='balanced', random_state=42)"
+  ],
+  "target_name": "ml_target_3class",
+  "target_classes": [
+    "Industrial Thermal Activity",
+    "Agricultural Burning",
+    "Natural / Wildfire / Other"
+  ],
+  "class_ordering_in_probabilities": [
+    "Agricultural Burning",
+    "Industrial Thermal Activity",
+    "Natural / Wildfire / Other"
+  ],
+  "feature_configuration": "Baseline (FIRMS Thermal + Persistence + WorldCover + OSM Spatial Proximity)",
+  "feature_count": 36,
+  "requires_sentinel2_at_inference": false,
+  "training_sample_count": 76,
+  "class_distribution": {
+    "Agricultural Burning": 50,
+    "Industrial Thermal Activity": 15,
+    "Natural / Wildfire / Other": 11
+  },
+  "cross_validation_strategy": "Stratified 5-Fold Cross-Validation (random_state=42)",
+  "random_seed": 42,
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 6,
+    "min_samples_split": 4,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "model_performance": {
+    "macro_f1_oof": 0.7772,
+    "macro_f1_cv_mean": 0.7594,
+    "macro_f1_cv_std": 0.1173,
+    "balanced_accuracy_oof": 0.7693,
+    "overall_accuracy_oof": 0.8553,
+    "industrial_thermal_activity": {
+      "recall": 0.9333,
+      "precision": 0.8750,
+      "f1": 0.9032
+    },
+    "agricultural_burning": {
+      "recall": 0.9000,
+      "precision": 0.9375,
+      "f1": 0.9184
+    },
+    "natural_wildfire_other": {
+      "recall": 0.5455,
+      "precision": 0.5000,
+      "f1": 0.5217
+    }
+  },
+  "training_timestamp": "2026-09-06T08:26:00Z",
+  "source_artifact_references": {
+    "trained_model_origin": "outputs/phase_4d_models/final_model.joblib",
+    "feature_manifest": "outputs/phase_4c_ml/feature_manifest_baseline.csv",
+    "training_dataset": "outputs/phase_4c_ml/ml_3class_dataset.csv",
+    "training_evaluation_report": "outputs/phase_4d_models/PHASE_4D_EVALUATION_REPORT.md",
+    "feature_importance_file": "outputs/phase_4d_models/feature_importance.csv"
+  }
+}

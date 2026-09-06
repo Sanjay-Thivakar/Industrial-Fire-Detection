@@ -1,0 +1,61 @@
+feature,importance
+grid_brightness_mean,0.08510668301791739
+grid_active_days,0.08490102524802896
+grid_detection_count,0.06680336347292572
+landcover_code_40,0.058628041864778914
+brightness,0.05771917323663132
+distance_to_facility_m,0.04487691131933702
+frp,0.043767147670914996
+bright_t31,0.04222672203808377
+log_frp,0.0411170960726638
+distance_to_higher_relevance_m,0.04011361234393033
+persistent_location_flag,0.03720231504794894
+is_day,0.035647156474187806
+brightness_difference,0.03529551607192451
+grid_total_frp,0.03235998677426368
+near_higher_relevance_1000m,0.028933576320831034
+brightness_zscore_local,0.027218760657286407
+frp_brightness_ratio,0.026479656212843664
+near_industrial_5000m,0.023634050217543816
+frp_zscore_local,0.022130516414100763
+nearest_facility_tier_HIGHER_RELEVANCE,0.013496049865127676
+near_industrial_1000m,0.012280847511615702
+nearest_facility_type_Other Industrial,0.010174370086396005
+is_stubble_burning_season,0.009605858477643493
+near_higher_relevance_2000m,0.008849598686029966
+nearest_facility_tier_GENERAL_CONTEXT,0.00880355113962029
+nearest_hr_category_Steel / Metallurgy,0.007882165774038073
+nearest_facility_category_Mining & Quarry,0.007031182669691752
+landcover_code_10,0.006778357661980854
+near_industrial_2000m,0.006655065318274196
+near_higher_relevance_5000m,0.006494038222118164
+nearest_facility_category_Industrial Area / Zone,0.005760678365046462
+landcover_code_30,0.005737406855122477
+nearest_facility_type_Mining,0.005153489789398728
+nearest_hr_category_Mining & Quarry,0.004871390567459048
+landcover_code_50,0.0046280058099256085
+nearest_hr_category_Power Plant,0.004588568957931694
+nearest_facility_category_Substation & Electrical Infrastructure,0.003905453270889322
+high_frp_flag_local,0.0031618534900183085
+near_higher_relevance_10000m,0.0030901881568248146
+nearest_facility_type_Power Plant,0.002750356713606978
+nearest_hr_category_Manufacturing & Industrial Works,0.0026454065915106667
+nearest_facility_type_Industrial Works,0.002535166524671006
+nearest_facility_tier_CAUTION_LOWER_RELEVANCE,0.002461108772315733
+nearest_facility_type_Manufacturing,0.0024116006817839273
+high_brightness_flag_local,0.0022220688943347926
+osm_coverage_status_COVERED,0.002092237872140344
+near_industrial_10000m,0.001859473923848765
+nearest_facility_category_Manufacturing & Industrial Works,0.001326233527189005
+"nearest_hr_category_Oil, Gas & Chemical",0.0010890010359939314
+confidence_numeric,0.001086050398196244
+near_industrial_500m,0.000978109970467034
+landcover_code_20,0.0007667765218926099
+nearest_facility_category_Generic Industrial Building,0.0006822005498639019
+nearest_facility_category_Steel / Metallurgy,0.000675817890642874
+osm_coverage_status_FAILED_TILE,0.000546475310669045
+nearest_facility_category_Power Plant,0.0004872657551983335
+"nearest_facility_category_Oil, Gas & Chemical",0.0002752179143793314
+near_higher_relevance_500m,0.0
+nearest_facility_type_Chemical,0.0
+landcover_code_60,0.0

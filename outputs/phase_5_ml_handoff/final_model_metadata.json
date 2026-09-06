@@ -1,0 +1,33 @@
+{
+  "selected_model_name": "Random Forest",
+  "experiment": "Baseline",
+  "features_count": 36,
+  "target_classes": [
+    "Industrial Thermal Activity",
+    "Agricultural Burning",
+    "Natural / Wildfire / Other"
+  ],
+  "class_distribution": {
+    "Agricultural Burning": 50,
+    "Industrial Thermal Activity": 15,
+    "Natural / Wildfire / Other": 11
+  },
+  "macro_f1_oof": 0.7772,
+  "macro_f1_cv_mean": 0.7594,
+  "macro_f1_cv_std": 0.1312,
+  "balanced_accuracy_oof": 0.7693,
+  "industrial_recall": 0.9333,
+  "industrial_precision": 0.875,
+  "industrial_f1": 0.9032,
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 6,
+    "min_samples_split": 4,
+    "class_weight": "balanced",
+    "random_state": 42
+  },
+  "training_samples": 76,
+  "cv_scheme": "Stratified 5-Fold (random_state=42)",
+  "timestamp": "2026-09-06T08:26:00Z",
+  "sha256_dataset": "1ad226e6c430fc49a1c6c000f86ac0d85f71e316b3427051c8698ee861fcf9d4"
+}

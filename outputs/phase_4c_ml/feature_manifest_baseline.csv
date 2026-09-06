@@ -1,0 +1,37 @@
+feature_name,feature_category,data_type,source,missing_count,missing_pct,description,handling_strategy
+frp,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,Fire Radiative Power (MW),Passthrough (0% missing)
+brightness,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,Brightness temperature in I4 channel (K),Passthrough (0% missing)
+bright_t31,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,Brightness temperature in I5 channel (K),Passthrough (0% missing)
+brightness_difference,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,"Difference I4 - I5 (K), active combustion indicator",Passthrough (0% missing)
+frp_brightness_ratio,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,Ratio of FRP to brightness temperature,Passthrough (0% missing)
+log_frp,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,Log-transformed Fire Radiative Power (log1p),Passthrough (0% missing)
+confidence_numeric,FIRMS Thermal,numeric,NASA FIRMS,0,0.0,"Sensor detection confidence (1=nominal, 2=high)",Passthrough (0% missing)
+is_day,FIRMS Temporal,binary,NASA FIRMS,0,0.0,"Daytime detection indicator (1=day, 0=night)",Passthrough (0% missing)
+grid_detection_count,FIRMS Persistence,numeric,NASA FIRMS,0,0.0,Total historical detections in 0.05 deg grid,Passthrough (0% missing)
+grid_active_days,FIRMS Persistence,numeric,NASA FIRMS,0,0.0,Active anomaly days in local 0.05 deg grid,Passthrough (0% missing)
+persistent_location_flag,FIRMS Persistence,binary,NASA FIRMS,0,0.0,Indicator for grid_active_days >= 3,Passthrough (0% missing)
+grid_total_frp,FIRMS Persistence,numeric,NASA FIRMS,0,0.0,Cumulative FRP in local grid cell,Passthrough (0% missing)
+grid_brightness_mean,FIRMS Persistence,numeric,NASA FIRMS,0,0.0,Mean brightness temperature across grid detections,Passthrough (0% missing)
+high_brightness_flag_local,FIRMS Anomaly,binary,NASA FIRMS,0,0.0,Local spatial spike in brightness flag,Passthrough (0% missing)
+high_frp_flag_local,FIRMS Anomaly,binary,NASA FIRMS,0,0.0,Local spatial spike in FRP flag,Passthrough (0% missing)
+brightness_zscore_local,FIRMS Anomaly,numeric,NASA FIRMS,0,0.0,Local standardized z-score of brightness,Passthrough (0% missing)
+frp_zscore_local,FIRMS Anomaly,numeric,NASA FIRMS,0,0.0,Local standardized z-score of FRP,Passthrough (0% missing)
+is_stubble_burning_season,FIRMS Temporal,binary,NASA FIRMS,0,0.0,Post-harvest crop burning season indicator,Passthrough (0% missing)
+landcover_code,ESA WorldCover,categorical,ESA WorldCover,0,0.0,Discrete land cover classification code (10-60),One-Hot Encoding
+distance_to_facility_m,OSM Proximity,numeric,OpenStreetMap,0,0.0,Geodesic distance to nearest industrial facility (m),Passthrough (0% missing)
+nearest_facility_type,OSM Context,categorical,OpenStreetMap,0,0.0,Primary industrial facility classification type,One-Hot Encoding
+nearest_facility_category,OSM Context,categorical,OpenStreetMap,0,0.0,Specific industrial manufacturing/process sector,One-Hot Encoding
+nearest_facility_tier,OSM Context,categorical,OpenStreetMap,0,0.0,"Relevance tier (HIGHER_RELEVANCE, CAUTION, GENERAL)",One-Hot Encoding
+near_industrial_500m,OSM Proximity,binary,OpenStreetMap,0,0.0,Binary proximity indicator <= 500m,Passthrough (0% missing)
+near_industrial_1000m,OSM Proximity,binary,OpenStreetMap,0,0.0,Binary proximity indicator <= 1000m,Passthrough (0% missing)
+near_industrial_2000m,OSM Proximity,binary,OpenStreetMap,0,0.0,Binary proximity indicator <= 2000m,Passthrough (0% missing)
+near_industrial_5000m,OSM Proximity,binary,OpenStreetMap,0,0.0,Binary proximity indicator <= 5000m,Passthrough (0% missing)
+near_industrial_10000m,OSM Proximity,binary,OpenStreetMap,0,0.0,Binary proximity indicator <= 10000m,Passthrough (0% missing)
+distance_to_higher_relevance_m,OSM Proximity,numeric,OpenStreetMap,0,0.0,Distance to nearest high-relevance industrial facility (m),Passthrough (0% missing)
+nearest_hr_category,OSM Context,categorical,OpenStreetMap,0,0.0,Category of nearest high-relevance facility,One-Hot Encoding
+near_higher_relevance_500m,OSM Proximity,binary,OpenStreetMap,0,0.0,High-relevance proximity indicator <= 500m,Passthrough (0% missing)
+near_higher_relevance_1000m,OSM Proximity,binary,OpenStreetMap,0,0.0,High-relevance proximity indicator <= 1000m,Passthrough (0% missing)
+near_higher_relevance_2000m,OSM Proximity,binary,OpenStreetMap,0,0.0,High-relevance proximity indicator <= 2000m,Passthrough (0% missing)
+near_higher_relevance_5000m,OSM Proximity,binary,OpenStreetMap,0,0.0,High-relevance proximity indicator <= 5000m,Passthrough (0% missing)
+near_higher_relevance_10000m,OSM Proximity,binary,OpenStreetMap,0,0.0,High-relevance proximity indicator <= 10000m,Passthrough (0% missing)
+osm_coverage_status,OSM Context,categorical,OpenStreetMap,0,0.0,OSM Overpass retrieval status (COVERED/FAILED_TILE),One-Hot Encoding

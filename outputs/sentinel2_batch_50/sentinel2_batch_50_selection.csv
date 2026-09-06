@@ -1,0 +1,51 @@
+selection_order,event_id,row_id,candidate_priority,landcover_class,acq_date,month,latitude,longitude,frp,osm_coverage_status,persistent_location_flag,is_spatial_duplicate,selection_reason
+1,FIRMS_TN_0468,468,MEDIUM,Mangroves,2024-12-19,2024-12,8.65877,78.11285,5.52,FAILED_TILE,0,False,Rare land cover stratum: Mangroves
+2,FIRMS_TN_0182,182,MEDIUM,Permanent water bodies,2024-12-28,2024-12,8.65828,78.11434,6.71,FAILED_TILE,0,False,Rare land cover stratum: Permanent water bodies
+3,FIRMS_TN_0037,37,MEDIUM,Bare/sparse vegetation,2024-11-09,2024-11,12.76743,77.78644,2.54,FAILED_TILE,0,False,Rare land cover stratum: Bare/sparse vegetation
+4,FIRMS_TN_0042,42,MEDIUM,Bare/sparse vegetation,2024-11-09,2024-11,12.85108,79.90353,1.68,FAILED_TILE,1,False,Rare land cover stratum: Bare/sparse vegetation
+5,FIRMS_TN_0297,297,HIGH,Tree cover,2025-01-08,2025-01,12.03586,79.81428,13.34,COVERED,0,False,HIGH priority diversity: Unrepresented landcover: Tree cover; Geographic diversity (91km away); High FRP: 13.3MW
+6,FIRMS_TN_0138,138,HIGH,Cropland,2024-12-16,2024-12,11.48131,77.4594,8.59,COVERED,0,False,HIGH priority diversity: Unrepresented landcover: Cropland; Geographic diversity (147km away); High FRP: 8.6MW
+7,FIRMS_TN_0030,30,HIGH,Built-up,2024-11-08,2024-11,11.18483,79.0995,0.85,COVERED,1,False,HIGH priority diversity: Unrepresented landcover: Built-up; Geographic diversity (122km away)
+8,FIRMS_TN_0300,300,HIGH,Grassland,2025-01-08,2025-01,9.97193,77.53833,5.18,COVERED,0,False,HIGH priority diversity: Unrepresented landcover: Grassland; Geographic diversity (158km away)
+9,FIRMS_TN_0459,459,HIGH,Cropland,2024-12-15,2024-12,9.81504,78.69252,3.73,COVERED,0,False,HIGH priority diversity: Geographic diversity (126km away)
+10,FIRMS_TN_0015,15,HIGH,Grassland,2024-11-05,2024-11,10.65226,78.76717,7.76,COVERED,0,False,HIGH priority diversity: Geographic diversity (69km away)
+11,FIRMS_TN_0524,524,HIGH,Built-up,2025-01-01,2025-01,11.81723,77.91619,2.82,COVERED,1,False,HIGH priority diversity: Geographic diversity (62km away)
+12,FIRMS_TN_0001,1,HIGH,Tree cover,2024-11-02,2024-11,9.29417,79.06924,5.15,COVERED,0,False,HIGH priority diversity: Geographic diversity (71km away)
+13,FIRMS_TN_0549,549,HIGH,Cropland,2025-01-05,2025-01,11.67086,79.1691,9.79,COVERED,0,False,HIGH priority diversity: High FRP: 9.8MW
+14,FIRMS_TN_0122,122,HIGH,Cropland,2024-12-10,2024-12,9.84554,78.02377,6.79,COVERED,0,False,HIGH priority diversity: Balanced multi-attribute diversity
+15,FIRMS_TN_0142,142,HIGH,Bare/sparse vegetation,2024-12-16,2024-12,11.20212,77.56716,1.93,COVERED,1,False,HIGH priority diversity: Balanced multi-attribute diversity
+16,FIRMS_TN_0176,176,HIGH,Tree cover,2024-12-27,2024-12,10.76445,78.79064,4.52,COVERED,0,False,HIGH priority diversity: Balanced multi-attribute diversity
+17,FIRMS_TN_0433,433,HIGH,Cropland,2024-12-08,2024-12,11.69407,78.08384,3.76,COVERED,0,False,HIGH priority diversity: Balanced multi-attribute diversity
+18,FIRMS_TN_0539,539,HIGH,Built-up,2025-01-04,2025-01,11.81536,77.91702,1.4,COVERED,1,False,HIGH priority diversity: Balanced multi-attribute diversity
+19,FIRMS_TN_0478,478,HIGH,Tree cover,2024-12-23,2024-12,11.48662,77.3672,8.34,COVERED,0,False,HIGH priority diversity: High FRP: 8.3MW
+20,FIRMS_TN_0008,8,HIGH,Built-up,2024-11-04,2024-11,11.81736,77.91756,1.06,COVERED,1,False,HIGH priority diversity: Balanced multi-attribute diversity
+21,FIRMS_TN_0051,51,HIGH,Bare/sparse vegetation,2024-11-10,2024-11,11.81612,77.91793,3.93,COVERED,1,False,HIGH priority diversity: Balanced multi-attribute diversity
+22,FIRMS_TN_0295,295,HIGH,Built-up,2025-01-07,2025-01,11.81625,77.91691,2.43,COVERED,1,False,HIGH priority diversity: Balanced multi-attribute diversity
+23,FIRMS_TN_0381,381,HIGH,Tree cover,2024-11-18,2024-11,11.81552,77.91557,0.62,COVERED,1,False,HIGH priority diversity: Balanced multi-attribute diversity
+24,FIRMS_TN_0151,151,HIGH,Tree cover,2024-12-20,2024-12,11.44777,77.46694,9.86,COVERED,0,False,HIGH priority diversity: High FRP: 9.9MW
+25,FIRMS_TN_0240,240,MEDIUM,Shrubland,2025-01-03,2025-01,8.20461,77.64593,3.94,FAILED_TILE,0,False,MEDIUM priority diversity: Unrepresented landcover: Shrubland; Geographic diversity (71km away)
+26,FIRMS_TN_0243,243,MEDIUM,Grassland,2025-01-03,2025-01,10.74473,77.07406,15.17,FAILED_TILE,0,False,MEDIUM priority diversity: Geographic diversity (74km away); High FRP: 15.2MW
+27,FIRMS_TN_0232,232,MEDIUM,Shrubland,2025-01-02,2025-01,13.14527,79.34011,4.12,FAILED_TILE,0,False,MEDIUM priority diversity: Geographic diversity (69km away)
+28,FIRMS_TN_0470,470,MEDIUM,Shrubland,2024-12-20,2024-12,9.32755,77.64175,2.54,FAILED_TILE,0,False,MEDIUM priority diversity: Geographic diversity (71km away)
+29,FIRMS_TN_0526,526,MEDIUM,Cropland,2025-01-02,2025-01,12.38014,79.09187,4.66,FAILED_TILE,0,False,MEDIUM priority diversity: Geographic diversity (79km away)
+30,FIRMS_TN_0036,36,MEDIUM,Cropland,2024-11-09,2024-11,12.29479,78.40997,2.87,FAILED_TILE,0,False,MEDIUM priority diversity: Geographic diversity (74km away)
+31,FIRMS_TN_0499,499,MEDIUM,Grassland,2024-12-30,2024-12,13.39337,80.10251,0.36,FAILED_TILE,1,False,MEDIUM priority diversity: Geographic diversity (64km away); Low FRP: 0.36MW
+32,FIRMS_TN_0486,486,MEDIUM,Shrubland,2024-12-25,2024-12,9.18193,78.44804,1.9,COVERED,0,False,MEDIUM priority diversity: Geographic diversity (68km away)
+33,FIRMS_TN_0606,606,MEDIUM,Grassland,2025-01-10,2025-01,8.61673,77.20992,6.47,COVERED,0,False,MEDIUM priority diversity: Geographic diversity (66km away)
+34,FIRMS_TN_0197,197,MEDIUM,Tree cover,2024-12-31,2024-12,12.26136,77.4773,10.24,FAILED_TILE,0,False,MEDIUM priority diversity: Geographic diversity (65km away); High FRP: 10.2MW
+35,FIRMS_TN_0342,342,MEDIUM,Grassland,2024-11-01,2024-11,10.46357,77.84547,3.68,COVERED,0,False,MEDIUM priority diversity: Geographic diversity (64km away)
+36,FIRMS_TN_0575,575,MEDIUM,Built-up,2025-01-06,2025-01,10.96319,78.09085,0.97,COVERED,0,False,MEDIUM priority diversity: Geographic diversity (61km away)
+37,FIRMS_TN_0613,613,MEDIUM,Grassland,2025-01-11,2025-01,9.56091,77.25191,14.13,COVERED,0,False,MEDIUM priority diversity: High FRP: 14.1MW
+38,FIRMS_TN_0169,169,MEDIUM,Cropland,2024-12-23,2024-12,11.57135,79.6544,7.97,COVERED,0,False,MEDIUM priority diversity: Balanced multi-attribute diversity
+39,FIRMS_TN_0218,218,MEDIUM,Cropland,2025-01-01,2025-01,11.5132,78.5043,10.79,COVERED,0,False,MEDIUM priority diversity: High FRP: 10.8MW
+40,FIRMS_TN_0454,454,MEDIUM,Tree cover,2024-12-14,2024-12,11.076,79.56938,0.43,COVERED,0,False,MEDIUM priority diversity: Low FRP: 0.43MW
+41,FIRMS_TN_0254,254,LOW,Tree cover,2025-01-05,2025-01,11.51105,76.51912,2.66,FAILED_TILE,0,False,LOW priority diversity: Geographic diversity (92km away)
+42,FIRMS_TN_0587,587,LOW,Cropland,2025-01-07,2025-01,10.56854,79.53321,0.21,FAILED_TILE,0,False,LOW priority diversity: Low FRP: 0.21MW
+43,FIRMS_TN_0371,371,LOW,Shrubland,2024-11-11,2024-11,10.23154,78.85571,2.1,COVERED,0,False,LOW priority diversity: Balanced multi-attribute diversity
+44,FIRMS_TN_0574,574,LOW,Tree cover,2025-01-06,2025-01,11.77325,76.99046,1.06,FAILED_TILE,0,False,LOW priority diversity: Balanced multi-attribute diversity
+45,FIRMS_TN_0441,441,LOW,Shrubland,2024-12-09,2024-12,9.85353,79.09533,3.85,COVERED,0,False,LOW priority diversity: Balanced multi-attribute diversity
+46,FIRMS_TN_0604,604,LOW,Grassland,2025-01-10,2025-01,11.15711,77.16776,2.44,FAILED_TILE,0,False,LOW priority diversity: Balanced multi-attribute diversity
+47,FIRMS_TN_0209,209,LOW,Tree cover,2025-01-01,2025-01,9.27809,78.04165,1.58,FAILED_TILE,0,False,LOW priority diversity: Balanced multi-attribute diversity
+48,FIRMS_TN_0071,71,LOW,Built-up,2024-11-21,2024-11,13.06687,80.1871,0.46,FAILED_TILE,1,False,LOW priority diversity: Low FRP: 0.46MW
+49,FIRMS_TN_0513,513,LOW,Tree cover,2024-12-31,2024-12,12.35191,80.02312,0.83,FAILED_TILE,0,False,LOW priority diversity: Balanced multi-attribute diversity
+50,FIRMS_TN_0239,239,LOW,Built-up,2025-01-02,2025-01,11.00624,76.89335,0.36,FAILED_TILE,0,False,LOW priority diversity: Low FRP: 0.36MW

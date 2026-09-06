@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / URL caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environments & Packaging
+.venv/
+venv/
+ENV/
+env/
+build/
+dist/
+*.egg-info/
+
+# IDE & OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# CDSE / API Credentials & Secrets
+.env
+*.env
+config/secrets*.yaml
+secrets.json
+
+# Raw High-Volume Satellite & Sensor Datasets
+data/raw/firms/
+data/cache/
+
+# OSM & Sentinel-2 Caches / Tiles / Checkpoints
+data/cache/osm_tiles/
+data/cache/sentinel2_tiles/
+outputs/sentinel2_full_633/checkpoints/
+
+# Intermediate Scratch Files
+scratch/

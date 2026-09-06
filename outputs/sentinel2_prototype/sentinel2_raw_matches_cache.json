@@ -1,0 +1,72 @@
+{
+  "FIRMS_TN_0007": {
+    "query_pre_count": 7,
+    "query_post_count": 7,
+    "status": "SUCCESS_BOTH_FOUND",
+    "pre_reason": "Selected observation -6 days from event (tile cloud=5.9%, candidate 1 of 2 usable)",
+    "post_reason": "Selected observation +6 days from event (tile cloud=9.2%, candidate 1 of 1 usable)"
+  },
+  "FIRMS_TN_0087": {
+    "query_pre_count": 8,
+    "query_post_count": 9,
+    "status": "SUCCESS_POST_ONLY",
+    "pre_reason": "All 8 observation(s) exceeded cloud threshold (40.0%); lowest was 55.4%",
+    "post_reason": "Selected observation +4 days from event (tile cloud=27.0%, candidate 1 of 1 usable)"
+  },
+  "FIRMS_TN_0001": {
+    "query_pre_count": 3,
+    "query_post_count": 3,
+    "status": "SUCCESS_BOTH_FOUND",
+    "pre_reason": "Selected observation -2 days from event (tile cloud=29.1%, candidate 1 of 2 usable)",
+    "post_reason": "Selected observation +3 days from event (tile cloud=24.0%, candidate 1 of 2 usable)"
+  },
+  "FIRMS_TN_0297": {
+    "query_pre_count": 3,
+    "query_post_count": 2,
+    "status": "SUCCESS_PRE_ONLY",
+    "pre_reason": "Selected observation -4 days from event (tile cloud=15.7%, candidate 1 of 1 usable)",
+    "post_reason": "All 2 observation(s) exceeded cloud threshold (40.0%); lowest was 82.8%"
+  },
+  "FIRMS_TN_0000": {
+    "query_pre_count": 3,
+    "query_post_count": 5,
+    "status": "SUCCESS_PRE_ONLY",
+    "pre_reason": "Selected observation -3 days from event (tile cloud=27.3%, candidate 1 of 1 usable)",
+    "post_reason": "All 5 observation(s) exceeded cloud threshold (40.0%); lowest was 50.7%"
+  },
+  "FIRMS_TN_0004": {
+    "query_pre_count": 3,
+    "query_post_count": 3,
+    "status": "SUCCESS_BOTH_FOUND",
+    "pre_reason": "Selected observation -4 days from event (tile cloud=34.2%, candidate 1 of 2 usable)",
+    "post_reason": "Selected observation +1 days from event (tile cloud=28.8%, candidate 1 of 2 usable)"
+  },
+  "FIRMS_TN_0046": {
+    "query_pre_count": 3,
+    "query_post_count": 3,
+    "status": "SUCCESS_PRE_ONLY",
+    "pre_reason": "Selected observation -5 days from event (tile cloud=36.3%, candidate 1 of 2 usable)",
+    "post_reason": "All 3 observation(s) exceeded cloud threshold (40.0%); lowest was 96.1%"
+  },
+  "FIRMS_TN_0017": {
+    "query_pre_count": 6,
+    "query_post_count": 6,
+    "status": "SUCCESS_BOTH_FOUND",
+    "pre_reason": "Selected observation -5 days from event (tile cloud=34.2%, candidate 1 of 5 usable)",
+    "post_reason": "Selected observation +5 days from event (tile cloud=24.3%, candidate 1 of 2 usable)"
+  },
+  "FIRMS_TN_0038": {
+    "query_pre_count": 3,
+    "query_post_count": 3,
+    "status": "SUCCESS_PRE_ONLY",
+    "pre_reason": "Selected observation -1 days from event (tile cloud=36.3%, candidate 1 of 3 usable)",
+    "post_reason": "All 3 observation(s) exceeded cloud threshold (40.0%); lowest was 73.3%"
+  },
+  "FIRMS_TN_0002": {
+    "query_pre_count": 6,
+    "query_post_count": 6,
+    "status": "SUCCESS_BOTH_FOUND",
+    "pre_reason": "Selected observation -5 days from event (tile cloud=28.7%, candidate 1 of 2 usable)",
+    "post_reason": "Selected observation +2 days from event (tile cloud=26.1%, candidate 1 of 2 usable)"
+  }
+}
