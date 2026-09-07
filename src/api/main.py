@@ -1,3 +1,8 @@
+
+
+
+
+
 """Industrial Fire Detection - Machine Learning Inference API.
 
 FastAPI service exposing Phase 5 production ML model inference.
@@ -15,6 +20,7 @@ from typing import Any, Dict, List, Optional
 
 from fastapi import FastAPI, Header, Request, status
 from fastapi.exceptions import RequestValidationError
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 from starlette.exceptions import HTTPException as StarletteHTTPException
@@ -35,6 +41,20 @@ logger = logging.getLogger("IndustrialFireDetectionAPI")
 API_VERSION = "1.0.0"
 DEFAULT_API_KEY = "test-api-key-phase5c"
 API_KEY = os.environ.get("ML_API_KEY", os.environ.get("API_KEY", DEFAULT_API_KEY))
+
+# CORS Configuration
+DEFAULT_CORS_ORIGINS: List[str] = [
+    "http://127.0.0.1:5173",
+    "http://localhost:5173",
+    "http://127.0.0.1:4173",
+    "http://localhost:4173",
+]
+raw_cors_origins = os.environ.get("CORS_ALLOWED_ORIGINS", "").strip()
+CORS_ORIGINS: List[str] = (
+    [o.strip() for o in raw_cors_origins.split(",") if o.strip()]
+    if raw_cors_origins
+    else DEFAULT_CORS_ORIGINS
+)
 
 EXPECTED_MODEL_SHA256 = "5909bb546fc55aeffd37b7bb601e96718709fe685e987705b246bb2963279798"
 MODEL_VERSION_IDENTIFIER = "phase_5_ml_handoff/final_model.joblib"
@@ -175,6 +195,15 @@ app = FastAPI(
     description="Backend ML inference API for 3-class thermal anomaly classification",
     version=API_VERSION,
     lifespan=lifespan,
+)
+
+# CORS Middleware Configuration
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=CORS_ORIGINS,
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["X-API-Key", "Content-Type", "Accept"],
 )
 
 

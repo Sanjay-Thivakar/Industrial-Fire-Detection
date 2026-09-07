@@ -283,3 +283,55 @@ def test_predict_success_without_event_id(client, valid_features):
     data = response.json()
     assert data["event_id"] is None
     assert data["predicted_class"] in PRODUCTION_CLASSES
+
+
+# ---------------------------------------------------------------------------
+# CORS Behavior Tests (Phase 7 Step 2 Fix H2)
+# ---------------------------------------------------------------------------
+
+
+def test_cors_preflight_allowed_origin(client):
+    """OPTIONS preflight from an allowed origin returns CORS headers and 200 OK."""
+    headers = {
+        "Origin": "http://127.0.0.1:5173",
+        "Access-Control-Request-Method": "POST",
+        "Access-Control-Request-Headers": "X-API-Key, Content-Type",
+    }
+    response = client.options("/api/v1/predict", headers=headers)
+    assert response.status_code == 200
+    assert response.headers.get("access-control-allow-origin") == "http://127.0.0.1:5173"
+    assert "POST" in response.headers.get("access-control-allow-methods", "")
+    assert "x-api-key" in response.headers.get("access-control-allow-headers", "").lower()
+    assert response.headers.get("access-control-allow-credentials") == "true"
+
+
+def test_cors_preflight_preview_origin(client):
+    """OPTIONS preflight from production preview origin (port 4173) succeeds."""
+    headers = {
+        "Origin": "http://127.0.0.1:4173",
+        "Access-Control-Request-Method": "GET",
+    }
+    response = client.options("/api/v1/health", headers=headers)
+    assert response.status_code == 200
+    assert response.headers.get("access-control-allow-origin") == "http://127.0.0.1:4173"
+
+
+def test_cors_actual_request_allowed_origin(client):
+    """GET /api/v1/health from allowed origin includes access-control-allow-origin."""
+    headers = {"Origin": "http://localhost:5173"}
+    response = client.get("/api/v1/health", headers=headers)
+    assert response.status_code == 200
+    assert response.headers.get("access-control-allow-origin") == "http://localhost:5173"
+    assert response.headers.get("access-control-allow-credentials") == "true"
+
+
+def test_cors_disallowed_origin_rejected(client):
+    """OPTIONS preflight from untrusted origin does NOT receive allow-origin header."""
+    headers = {
+        "Origin": "http://malicious-site.example.com",
+        "Access-Control-Request-Method": "POST",
+        "Access-Control-Request-Headers": "X-API-Key",
+    }
+    response = client.options("/api/v1/predict", headers=headers)
+    assert "access-control-allow-origin" not in response.headers
+
