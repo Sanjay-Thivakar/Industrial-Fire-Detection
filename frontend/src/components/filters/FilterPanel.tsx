@@ -79,12 +79,14 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
   return (
     <aside className={`filter-sidebar ${isOpen ? 'open' : 'collapsed'}`}>
       <div className="filter-header">
-        <div className="filter-header-title">
-          <h3>Multi-Facet Filters</h3>
-          <span className="match-pill">{totalMatches} Events</span>
-        </div>
+        {isOpen && (
+          <div className="filter-header-title">
+            <h3>Multi-Facet Filters</h3>
+            <span className="match-pill">{totalMatches} Events</span>
+          </div>
+        )}
         <div className="filter-header-actions">
-          {isFiltered && (
+          {isOpen && isFiltered && (
             <button type="button" className="reset-filter-btn" onClick={onResetFilters}>
               Reset
             </button>
@@ -94,6 +96,7 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
             className="toggle-sidebar-btn"
             onClick={() => setIsOpen(!isOpen)}
             title={isOpen ? 'Collapse Filters' : 'Expand Filters'}
+            aria-label={isOpen ? 'Collapse Filters' : 'Expand Filters'}
           >
             {isOpen ? '◀' : '▶'}
           </button>

@@ -364,6 +364,7 @@ html, body, #root {
   flex-shrink: 0;
   height: 100%;
   min-height: 0;
+  overflow: hidden;
 }
 
 .filter-sidebar.open {
@@ -372,6 +373,23 @@ html, body, #root {
 
 .filter-sidebar.collapsed {
   width: 48px;
+  overflow: hidden;
+}
+
+.filter-sidebar.collapsed .filter-header {
+  padding: 0.65rem 0;
+  justify-content: center;
+}
+
+.filter-sidebar.collapsed .filter-header-title,
+.filter-sidebar.collapsed .reset-filter-btn,
+.filter-sidebar.collapsed .filter-body {
+  display: none !important;
+}
+
+.filter-sidebar.collapsed .filter-header-actions {
+  justify-content: center;
+  width: 100%;
 }
 
 .filter-header {
